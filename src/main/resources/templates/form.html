@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Secrets</title>
+    </head>
+    <body>
+
+        <h1>Tell me a secret</h1>
+
+        <form action="#" th:action="@{/form}" method="POST">
+            <p><label for="secret">Secret</label>: <input type="text" name="secret" id="secret"/></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+
+    </body>
+</html>

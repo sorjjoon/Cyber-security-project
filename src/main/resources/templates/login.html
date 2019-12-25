@@ -1,0 +1,45 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+
+        <h3>Retrieve your secrets, or create a new one</h3>
+
+        <form name='f' action='/login' method='POST'>
+            <table>
+                <tr><td>User:</td><td><input type='text' name='username' required="required"/></td></tr>
+                <tr><td>Password:</td><td><input type='password' name='password' required="required"/></td></tr>
+                
+
+                <tr><td colspan='2'><input id="retrive" name="retrieve" type="submit" value="Retreive your secrets"/></td></tr>
+
+                
+                
+                <tr><td>New secret</td><td><input type='text' name='secret' value=''/></td></tr>
+
+                <tr><td colspan='2'><input id="new" name="new" type="submit" value="new secret"/></td></tr>
+
+
+            </table>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                
+
+        </form>
+        <p> <br></br>  </p>
+        <form action="/newuser" method="GET">
+            <input type="submit" name="upvote" value="create user" />
+        </form>
+        
+        <ul>
+            <li th:each="secret : ${secrets}" th:text="${secret.content}"> secret </li>
+        </ul>
+
+
+
+    </body>
+</html>
