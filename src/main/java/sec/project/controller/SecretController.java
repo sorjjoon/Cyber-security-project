@@ -38,7 +38,6 @@ public class SecretController {
         if (userStorage.checkPassword(username, password)) {
             try {
                 List<Secret> secrets = secretStorage.getSecrets(username);
-                System.out.println(username + " wanted to know their secrets");
                 for(Secret s :secrets) {
                     System.out.println(s.content);
                 }
