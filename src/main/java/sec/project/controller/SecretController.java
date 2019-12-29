@@ -38,9 +38,7 @@ public class SecretController {
         if (userStorage.checkPassword(username, password)) {
             try {
                 List<Secret> secrets = secretStorage.getSecrets(username);
-                for(Secret s :secrets) {
-                    System.out.println(s.content);
-                }
+              
                 model.addAttribute("secrets",secrets);
 
                 return "secrets";
