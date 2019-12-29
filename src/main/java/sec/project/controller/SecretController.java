@@ -63,10 +63,12 @@ public class SecretController {
         
                 return "done";
             } catch (SQLException e) {
+                 return "error";
 
             }
-        }
-        return "error";
+        } 
+            
+        return "wrongpassword";
 
     }
 
