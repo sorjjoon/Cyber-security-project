@@ -1,4 +1,4 @@
-project set to run on localhost port 8080 by default  
+
 A simple web service where user can store their deepest secrets, and later retrive them.  
 
 To create a new user, click the "new user" button and fill your password and username  
